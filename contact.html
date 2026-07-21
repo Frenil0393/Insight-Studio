@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | The Insight Studio</title>
+    <meta
+      name="description"
+      content="The Insight Studio is a visionary architectural and structural engineering firm based in Ahmedabad, Gujarat."
+    />
+
+    <!-- OPEN GRAPH / SOCIAL MEDIA PREVIEW TAGS -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://insightstudio.gt.tc/" />
+    <meta
+      property="og:title"
+      content="The Insight Studio | Masterful Architecture"
+    />
+    <meta
+      property="og:description"
+      content="Visionary architectural and structural engineering firm crafting high-performance monoliths and luxury estates."
+    />
+    <!-- Replace this URL with a direct link to your best architectural rendering -->
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Insight Studio | Architecture" />
+    <meta
+      name="twitter:description"
+      content="Visionary architectural and structural engineering firm."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta name="theme-color" content="#0a0a0c" />
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Insight" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.module.js"></script>
+
+    <!-- Specific Mobile Styles for the Contact Page -->
+    <style>
+      .contact-email-link {
+        border-bottom: 2px solid var(--accent-color);
+        display: inline-block;
+        word-break: break-word;
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      /* 📱 MOBILE COMPACT FORM OVERRIDES */
+      @media (max-width: 768px) {
+        .contact-hero-title {
+          font-size: clamp(2.5rem, 12vw, 3.5rem) !important;
+          margin-bottom: 1.5rem !important;
+          line-height: 1.1;
+        }
+        .contact-email-link {
+          font-size: clamp(1.2rem, 6vw, 1.5rem) !important;
+        }
+
+        /* --- WIDTH FIXES --- */
+        .contact-form-wrapper {
+          margin-top: 1rem;
+          width: 100% !important;
+          display: block;
+        }
+
+        /* Perfectly constrains the box so it doesn't overflow or shrink */
+        .contact-layout {
+          width: 100% !important;
+          box-sizing: border-box !important;
+          padding: 1.75rem 1.25rem !important;
+          border-radius: 16px;
+          margin: 0 auto;
+        }
+
+        .form-group {
+          width: 100% !important;
+          margin-bottom: 1.5rem !important;
+        }
+
+        /* Ensures text inputs stretch exactly to the edge of the box */
+        .form-input {
+          width: 100% !important;
+          box-sizing: border-box !important;
+          padding: 0.5rem 0 !important;
+          font-size: 0.95rem !important;
+        }
+
+        .form-label {
+          font-size: 0.95rem !important;
+          top: 0.5rem !important;
+        }
+        .form-input:focus ~ .form-label,
+        .form-input:valid ~ .form-label {
+          top: -1rem !important;
+          font-size: 0.75rem !important;
+        }
+
+        textarea.form-input {
+          height: 70px !important;
+        }
+
+        /* Make button exactly match the width of the form */
+        .btn-primary {
+          width: 100% !important;
+          box-sizing: border-box !important;
+          padding: 1rem !important;
+          font-size: 0.85rem !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PERMANENT ELEMENTS -->
+    <div class="preloader-v2">
+      <div class="preloader-content">
+        <div class="preloader-title">INSIGHT STUDIO</div>
+        <div class="preloader-line-container">
+          <div class="preloader-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div id="webgl-container"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand-logo hover-target"
+          >Insight Studio<span>.</span></a
+        >
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="hover-target">Home</a></li>
+            <li><a href="about.html" class="hover-target">Studio</a></li>
+            <li><a href="work.html" class="hover-target">Projects</a></li>
+            <li><a href="contact.html" class="hover-target">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main style="padding-top: var(--nav-height)">
+      <section class="section">
+        <div class="container">
+          <div class="grid-12 align-top">
+            <!-- LEFT COLUMN: Contact Text -->
+            <div class="col-span-6 gs-reveal">
+              <span class="subtitle">Start a Project</span>
+              <h1
+                class="title-lg contact-hero-title"
+                style="margin-bottom: 2rem"
+              >
+                Let's build<br />the future.
+              </h1>
+              <p class="text-muted" style="margin-bottom: 4rem">
+                Get in touch with Vasu Vasoya and the team. We are currently
+                accepting new projects for Q4 2026.
+              </p>
+
+              <div>
+                <p class="subtitle">Direct Email</p>
+                <a
+                  href="mailto:insightstudio27@gmail.com"
+                  class="title-md hover-target contact-email-link"
+                  >insightstudio27@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Contact Form -->
+            <div class="col-span-6 gs-reveal contact-form-wrapper">
+              <div class="contact-layout">
+                <!-- WEB3FORMS CONTACT FORM -->
+                <form
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  id="custom-form"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="e3780364-7ea4-4b00-9e47-e63edd2d5802"
+                  />
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New Project Inquiry - Insight Studio"
+                  />
+                  <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://insightstudio.gt.tc/contact.html"
+                  />
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    class="hidden"
+                    style="display: none"
+                  />
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-input"
+                      id="name"
+                      name="name"
+                      required
+                    />
+                    <label class="form-label" for="name">Your Name</label>
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-input"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                    <label class="form-label" for="email">Email Address</label>
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      class="form-input"
+                      id="phone"
+                      name="phone"
+                      required
+                    />
+                    <label class="form-label" for="phone">Phone Number</label>
+                  </div>
+
+                  <div class="form-group">
+                    <textarea
+                      class="form-input"
+                      id="message"
+                      name="message"
+                      required
+                    ></textarea>
+                    <label class="form-label" for="message"
+                      >Project Details</label
+                    >
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn-primary hover-target"
+                    style="width: 100%"
+                  >
+                    <span>Send Inquiry</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">Insight Studio.</div>
+            <p class="footer-text">
+              Elevating skylines through high-performance structural engineering
+              and bleeding-edge architectural design.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html" class="hover-target">Home</a></li>
+              <li><a href="about.html" class="hover-target">Our Studio</a></li>
+              <li>
+                <a href="work.html" class="hover-target">Selected Works</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Connect</h4>
+            <ul>
+              <li>
+                <a href="contact.html" class="hover-target"
+                  >Commission a Project</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/insight__studio_?utm_source=qr&igsh=eG1xZWlhYzVlaHoy"
+                  class="hover-target"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Insight Studio. All Rights Reserved.</p>
+          <p>Principal Architect: Vasu Vasoya</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/scene.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

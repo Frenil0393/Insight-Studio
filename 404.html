@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Missing Monolith | The Insight Studio</title>
+    <link rel="stylesheet" href="css/style.css?v=2.0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.module.js"></script>
+  </head>
+  <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div id="webgl-container"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand-logo hover-target"
+          >Insight Studio<span>.</span></a
+        >
+      </div>
+    </header>
+
+    <main
+      style="
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      "
+    >
+      <div class="container gs-reveal">
+        <span class="subtitle" style="color: var(--text-secondary)"
+          >Error 404</span
+        >
+        <h1 class="title-display" style="margin-bottom: 2rem">
+          Monolith<br />Not Found.
+        </h1>
+        <p
+          class="text-muted"
+          style="margin: 0 auto 3rem auto; max-width: 500px"
+        >
+          The structure you are looking for has been demolished, moved, or never
+          existed.
+        </p>
+        <a href="index.html" class="btn-primary hover-target"
+          ><span>Return to Reality</span></a
+        >
+      </div>
+    </main>
+
+    <script type="module" src="js/scene.js?v=2.0"></script>
+    <script type="module" src="js/app.js?v=2.0"></script>
+  </body>
+</html>

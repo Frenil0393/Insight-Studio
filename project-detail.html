@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Detail | The Insight Studio</title>
+    <meta
+      name="description"
+      content="The Insight Studio is a visionary architectural and structural engineering firm based in Ahmedabad, Gujarat."
+    />
+
+    <!-- OPEN GRAPH / SOCIAL MEDIA PREVIEW TAGS -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://insightstudio.gt.tc/" />
+    <meta
+      property="og:title"
+      content="The Insight Studio | Masterful Architecture"
+    />
+    <meta
+      property="og:description"
+      content="Visionary architectural and structural engineering firm crafting high-performance monoliths and luxury estates."
+    />
+    <!-- Replace this URL with a direct link to your best architectural rendering -->
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Insight Studio | Architecture" />
+    <meta
+      name="twitter:description"
+      content="Visionary architectural and structural engineering firm."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta name="theme-color" content="#0a0a0c" />
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Insight" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.module.js"></script>
+
+    <!-- Specific Mobile Styles for the Project Detail Page -->
+    <style>
+      /* 📱 MOBILE OVERRIDES */
+      @media (max-width: 768px) {
+        /* 1. Remove Header Button on Mobile */
+        .site-header .btn-primary {
+          display: none !important;
+        }
+
+        /* 2. Adjust Hero Section for Mobile */
+        .pd-hero {
+          height: 70vh !important;
+          padding-bottom: 3rem !important;
+        }
+        #pd-title {
+          font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
+          margin-bottom: 0.5rem !important;
+          line-height: 1.1;
+        }
+
+        /* 3. Reduce massive empty gaps in the main layout */
+        .pd-layout-grid {
+          padding-top: 4rem !important;
+          padding-bottom: 4rem !important;
+          gap: 3rem !important;
+        }
+
+        /* 4. Compact the Sidebar Meta Information */
+        .pd-meta-block {
+          margin-bottom: 1.5rem !important;
+        }
+        .pd-meta-block h4 {
+          margin-bottom: 0.3rem !important;
+        }
+
+        /* 5. Shrink Deep Text Slightly for Readability */
+        .pd-text-content h3 {
+          font-size: 1.5rem !important;
+          margin-bottom: 1rem !important;
+        }
+        .pd-text-content p {
+          font-size: 1rem !important;
+          margin-bottom: 2.5rem !important;
+        }
+
+        /* 6. Fix the Massive Bento Gallery Heights */
+        .pd-gallery-bento {
+          margin-bottom: 4rem !important;
+          gap: 1rem !important; /* Tighter gap between images */
+        }
+        .pd-gallery-item:nth-child(1),
+        .pd-gallery-item:nth-child(2),
+        .pd-gallery-item:nth-child(3) {
+          height: 35vh !important; /* Overrides the huge 85vh and 50vh desktop sizes */
+          border-radius: 12px !important;
+        }
+
+        /* 7. Next Project Section Spacing */
+        .pd-next-project {
+          padding: 5rem var(--container-padding) !important;
+        }
+        #pd-next-title {
+          font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PERMANENT ELEMENTS -->
+    <div class="preloader-v2">
+      <div class="preloader-content">
+        <div class="preloader-title">INSIGHT STUDIO</div>
+        <div class="preloader-line-container">
+          <div class="preloader-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div id="webgl-container"></div>
+
+    <!-- HEADER (With Back to Archive Button) -->
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand-logo hover-target"
+          >Insight Studio<span>.</span></a
+        >
+        <!-- This button will be hidden on mobile by the CSS above -->
+        <a
+          href="work.html"
+          class="btn-primary hover-target"
+          style="padding: 0.8rem 2rem"
+          ><span>Back to Archive</span></a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. Immersive Hero with Parallax -->
+      <section class="pd-hero">
+        <div class="pd-hero-img-wrapper" id="pd-parallax-img">
+          <img id="pd-image" src="" alt="Project Hero Image" />
+        </div>
+        <div class="pd-hero-overlay"></div>
+        <div class="pd-hero-content container">
+          <span
+            class="subtitle gs-reveal"
+            id="pd-category"
+            style="color: var(--text-primary)"
+            >Loading...</span
+          >
+          <h1 class="title-display gs-reveal" id="pd-title" style="color: #fff">
+            Loading...
+          </h1>
+        </div>
+      </section>
+
+      <!-- 2. Sticky Meta & Deep Text Content -->
+      <section class="container pd-layout-grid">
+        <!-- Sidebar -->
+        <aside class="pd-sticky-sidebar gs-reveal">
+          <div class="pd-meta-block">
+            <h4>Client</h4>
+            <p id="pd-client">Loading...</p>
+          </div>
+          <div class="pd-meta-block">
+            <h4>Role & Scope</h4>
+            <p id="pd-role">Loading...</p>
+          </div>
+          <div class="pd-meta-block">
+            <h4>Timeline</h4>
+            <p id="pd-duration">Loading...</p>
+          </div>
+          <div class="pd-meta-block">
+            <h4>Materials & Tech</h4>
+            <ul id="pd-materials">
+              <li>Loading...</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Main Scroll Content -->
+        <article class="pd-text-content">
+          <div class="gs-reveal">
+            <h3>The Challenge</h3>
+            <p id="pd-challenge">Loading...</p>
+          </div>
+          <div class="gs-reveal">
+            <h3>Architectural Solution</h3>
+            <p id="pd-solution">Loading...</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- 3. Asymmetrical Bento Gallery -->
+      <section class="container pd-gallery-bento" id="pd-gallery"></section>
+
+      <!-- 4. Massive Next Project Link -->
+      <section
+        class="pd-next-project hover-target"
+        id="pd-next-link"
+        style="cursor: pointer"
+      >
+        <a
+          href="#"
+          id="pd-next-href"
+          style="display: block; width: 100%; height: 100%"
+        >
+          <span class="subtitle">Next Project</span>
+          <div class="pd-next-title" id="pd-next-title">Loading...</div>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom" style="border-top: none">
+          <p>&copy; 2026 The Insight Studio. All Rights Reserved.</p>
+          <p>Founder: Vasu Vasoya</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/scene.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

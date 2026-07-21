@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About The Studio | The Insight Studio</title>
+    <meta
+      name="description"
+      content="The Insight Studio is a visionary architectural and structural engineering firm based in Ahmedabad, Gujarat."
+    />
+    <!-- OPEN GRAPH / SOCIAL MEDIA PREVIEW TAGS -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://insightstudio.gt.tc/" />
+    <meta
+      property="og:title"
+      content="The Insight Studio | Masterful Architecture"
+    />
+    <meta
+      property="og:description"
+      content="Visionary architectural and structural engineering firm crafting high-performance monoliths and luxury estates."
+    />
+    <!-- Replace this URL with a direct link to your best architectural rendering -->
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Insight Studio | Architecture" />
+    <meta
+      name="twitter:description"
+      content="Visionary architectural and structural engineering firm."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Insight" />
+    <meta name="theme-color" content="#0a0a0c" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.module.js"></script>
+
+    <!-- Specific Styles for the About Page to handle Mobile vs Desktop Layouts -->
+    <style>
+      .about-layout {
+        gap: 4rem;
+      }
+      .about-sidebar {
+        position: sticky;
+        top: calc(var(--nav-height) + 4rem);
+      }
+      .text-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      .ethos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2.5rem;
+      }
+
+      /* Mobile overrides so nothing sticks or overflows */
+      @media (max-width: 1024px) {
+        .about-sidebar {
+          position: relative;
+          top: 0;
+        }
+        .text-split {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .about-layout {
+          gap: 1.5rem;
+        }
+        .ethos-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .about-title {
+          font-size: clamp(2.5rem, 12vw, 4rem) !important;
+          line-height: 1.1;
+          margin-bottom: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PERMANENT ELEMENTS -->
+    <div class="preloader-v2">
+      <div class="preloader-content">
+        <div class="preloader-title">INSIGHT STUDIO</div>
+        <div class="preloader-line-container">
+          <div class="preloader-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div id="webgl-container"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand-logo hover-target"
+          >Insight Studio<span>.</span></a
+        >
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="hover-target">Home</a></li>
+            <li><a href="about.html" class="hover-target">Studio</a></li>
+            <li><a href="work.html" class="hover-target">Projects</a></li>
+            <li><a href="contact.html" class="hover-target">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- BARBA CONTAINER -->
+    <div data-barba="container" data-barba-namespace="about">
+      <main
+        style="
+          padding-top: calc(var(--nav-height) + 4rem);
+          padding-bottom: 6rem;
+        "
+      >
+        <div class="container">
+          <div class="grid-12 align-top about-layout">
+            <!-- LEFT COLUMN: Hero Profile -->
+            <div class="col-span-4 gs-reveal about-sidebar">
+              <span class="subtitle">Founder & Principal Architect</span>
+              <h1
+                class="title-display about-title"
+                style="
+                  font-size: clamp(3rem, 6vw, 5rem);
+                  margin-bottom: 2rem;
+                  line-height: 1;
+                "
+              >
+                Vasu<br />Vasoya.
+              </h1>
+
+              <div
+                style="
+                  width: 100%;
+                  height: 1px;
+                  background: var(--border-color);
+                  margin: 2rem 0;
+                "
+              ></div>
+
+              <p
+                class="text-muted"
+                style="font-size: var(--text-sm); margin-bottom: 1rem"
+              >
+                <strong>Location:</strong> Ahmedabad, Gujarat
+              </p>
+              <p class="text-muted" style="font-size: var(--text-sm)">
+                <strong>Focus:</strong> Extreme Site Architecture, Urban
+                Monoliths, Structural Physics.
+              </p>
+            </div>
+
+            <!-- RIGHT COLUMN: Manifesto & Ethos -->
+            <div class="col-span-8 gs-reveal">
+              <h2
+                class="title-lg"
+                style="margin-bottom: 2rem; color: var(--text-primary)"
+              >
+                Eradicating<br />Mediocrity.
+              </h2>
+
+              <!-- 2-Column Text Split for Desktop / 1-Column for Mobile -->
+              <div class="text-split">
+                <p
+                  class="text-muted"
+                  style="font-size: var(--text-md); margin: 0"
+                >
+                  I founded The Insight Studio with a singular, uncompromising
+                  vision: to push the boundaries of structural physics and
+                  redefine how human beings interact with their physical spaces.
+                </p>
+                <p
+                  class="text-muted"
+                  style="font-size: var(--text-md); margin: 0"
+                >
+                  We do not merely design buildings; we engineer landmarks. From
+                  precariously cantilevered Pacific cliffside estates to
+                  80-story commercial monoliths, our approach blends raw,
+                  brutalist materiality with seamless, elegant flow.
+                </p>
+              </div>
+
+              <p
+                class="text-muted"
+                style="font-size: var(--text-md); margin-bottom: 4rem"
+              >
+                By treating architecture as a dialogue between the earth and the
+                structure, we ensure every project we commission becomes a
+                permanent, iconic fixture of its landscape.
+              </p>
+
+              <!-- Ethos Grid -->
+              <div
+                style="
+                  padding-top: 4rem;
+                  border-top: 1px solid var(--border-color);
+                "
+              >
+                <span class="subtitle" style="margin-bottom: 2rem"
+                  >Our Studio Ethos</span
+                >
+
+                <div class="ethos-grid">
+                  <div class="hover-target">
+                    <h3
+                      style="
+                        font-family: var(--font-heading);
+                        color: var(--accent-color);
+                        font-size: 1.2rem;
+                        margin-bottom: 0.5rem;
+                      "
+                    >
+                      01. Raw Materiality
+                    </h3>
+                    <p
+                      class="text-muted"
+                      style="font-size: var(--text-sm); line-height: 1.6"
+                    >
+                      We leave board-formed concrete exposed, let blackened
+                      steel patinate naturally, and utilize vast structural
+                      glass to erase the barrier between shelter and nature.
+                    </p>
+                  </div>
+
+                  <div class="hover-target">
+                    <h3
+                      style="
+                        font-family: var(--font-heading);
+                        color: var(--accent-color);
+                        font-size: 1.2rem;
+                        margin-bottom: 0.5rem;
+                      "
+                    >
+                      02. Parametric Precision
+                    </h3>
+                    <p
+                      class="text-muted"
+                      style="font-size: var(--text-sm); line-height: 1.6"
+                    >
+                      Utilizing advanced algorithmic modeling, we calculate
+                      seismic resilience, wind shear dynamics, and solar heat
+                      gain before a single foundation is poured.
+                    </p>
+                  </div>
+
+                  <div class="hover-target">
+                    <h3
+                      style="
+                        font-family: var(--font-heading);
+                        color: var(--accent-color);
+                        font-size: 1.2rem;
+                        margin-bottom: 0.5rem;
+                      "
+                    >
+                      03. Sustainable Scale
+                    </h3>
+                    <p
+                      class="text-muted"
+                      style="font-size: var(--text-sm); line-height: 1.6"
+                    >
+                      True luxury is sustainable. From closed-loop blackwater
+                      recycling systems to passive thermal cooling, we build to
+                      LEED Platinum standards.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <div class="footer-brand">Insight Studio.</div>
+              <p class="footer-text">
+                Elevating skylines through high-performance structural
+                engineering and bleeding-edge architectural design.
+              </p>
+            </div>
+            <div class="footer-links">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html" class="hover-target">Home</a></li>
+                <li>
+                  <a href="about.html" class="hover-target">Our Studio</a>
+                </li>
+                <li>
+                  <a href="work.html" class="hover-target">Selected Works</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h4>Connect</h4>
+              <ul>
+                <li>
+                  <a href="contact.html" class="hover-target"
+                    >Commission a Project</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/insight__studio_?utm_source=qr&igsh=eG1xZWlhYzVlaHoy"
+                    class="hover-target"
+                    >Instagram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Insight Studio. All Rights Reserved.</p>
+            <p>Principal Architect: Vasu Vasoya</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- END BARBA CONTAINER -->
+
+    <!-- SCRIPTS -->
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/scene.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
