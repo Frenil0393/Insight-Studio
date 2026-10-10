@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background: #eeece3;
+  color: #29372b;
+  font:
+    16px/1.7 Arial,
+    sans-serif;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+main {
+  max-width: 500px;
+  padding: 40px;
+}
+h1 {
+  font:
+    normal clamp(48px, 9vw, 85px)/1 Georgia,
+    serif;
+  letter-spacing: -0.04em;
+}
+p {
+  max-width: 380px;
+}
+a {
+  display: inline-block;
+  color: inherit;
+  margin-top: 25px;
+  padding: 14px 0;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}

@@ -1,0 +1,236 @@
+/* Contact: a compact portfolio of possibilities, linked to the project brief. */
+.project-possibilities {
+  margin-top: 44px;
+  max-width: 520px;
+  background: #e6e2d7;
+  color: #283024;
+  padding: 26px;
+  position: relative;
+  scroll-margin-top: 120px;
+}
+.possibilities-heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  padding-bottom: 23px;
+}
+.possibilities-kicker {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  padding-top: 4px;
+}
+.possibilities-mark {
+  font-size: 34px;
+  line-height: 1;
+  color: #a14e32;
+}
+.possibilities-heading h2 {
+  grid-column: 1/-1;
+  font-size: clamp(36px, 3.3vw, 52px);
+  line-height: 0.99;
+  letter-spacing: -0.055em;
+  margin-top: 22px;
+}
+.possibilities-heading h2 em {
+  color: #8c4e37;
+}
+.possibilities-scene {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1.88;
+  background: #565b4a;
+  overflow: hidden;
+}
+.possibilities-scene img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.possibilities-scene:after {
+  content: '';
+  position: absolute;
+  inset: 40% 0 0;
+  z-index: 1;
+  background: linear-gradient(transparent, #141b13bd);
+  pointer-events: none;
+}
+.possibilities-scene figcaption {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 2;
+  color: #fff9eb;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.possibilities-counter {
+  flex: none;
+  font-size: 8px;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+.possibilities-counter b {
+  font-weight: 400;
+}
+.possibilities-controls[hidden] {
+  display: none;
+}
+.page-contact .possibilities-instruction {
+  font-size: 12px;
+  color: #293126;
+  margin: 24px 0 14px;
+  line-height: 1.7;
+}
+.possibilities-instruction > span {
+  display: block;
+  color: #666a5e;
+  font-size: 10px;
+}
+.possibilities-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #34403035;
+  border-left: 1px solid #34403035;
+}
+.possibilities-options .possibility {
+  display: grid;
+  grid-template-columns: 16px 1fr 14px;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+  min-height: 58px;
+  padding: 12px 10px;
+  color: #303a2d;
+  border-right: 1px solid #34403035;
+  border-bottom: 1px solid #34403035;
+  font-size: 12px;
+  line-height: 1.35;
+  transition:
+    background 0.25s,
+    color 0.25s;
+  position: relative;
+}
+.possibility-number {
+  font-size: 8px;
+  opacity: 0.6;
+}
+.possibility-check {
+  font-size: 15px;
+  text-align: right;
+  opacity: 0.55;
+}
+.possibilities-options .possibility[aria-pressed='true'] {
+  background: #30412e;
+  color: #fff7e6;
+}
+.possibility[aria-pressed='true'] .possibility-check {
+  opacity: 1;
+}
+.possibilities-options .possibility:focus-visible {
+  z-index: 1;
+  outline: 2px solid #ad4a27;
+  outline-offset: -3px;
+}
+.possibilities-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 52px;
+  padding: 13px 0;
+}
+.possibilities-dot {
+  height: 5px;
+  width: 5px;
+  flex: none;
+  border: 1px solid #78806c;
+  border-radius: 50%;
+  transition: background 0.25s;
+}
+.has-direction .possibilities-dot {
+  background: #42633a;
+  border-color: #42633a;
+}
+.page-contact .possibilities-note p {
+  font-size: 10px;
+  line-height: 1.5;
+  color: #525c4b;
+  margin: 0;
+}
+.possibilities-disclosure {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.035em;
+  line-height: 1.6;
+  color: #686b60;
+  border-top: 1px solid #34403026;
+  padding-top: 12px;
+}
+@media (hover: hover) {
+  .possibilities-options .possibility:not([aria-pressed='true']):hover {
+    background: #d3d3c4;
+  }
+  .possibility:hover .possibility-check {
+    opacity: 1;
+  }
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+  .project-possibilities {
+    padding: 20px;
+  }
+  .possibilities-options .possibility {
+    font-size: 11px;
+    grid-template-columns: 1fr 13px;
+  }
+  .possibility-number {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .project-possibilities {
+    max-width: none;
+    margin-top: 35px;
+    padding: 22px;
+  }
+  .possibilities-heading h2 {
+    font-size: 43px;
+  }
+  .possibilities-scene {
+    aspect-ratio: 1.7;
+  }
+  .possibilities-options .possibility {
+    min-height: 60px;
+  }
+}
+@media (max-width: 370px) {
+  .project-possibilities {
+    padding: 16px;
+  }
+  .possibilities-options .possibility {
+    font-size: 11px;
+    grid-template-columns: 1fr 14px;
+  }
+  .possibility-number {
+    display: none;
+  }
+  .possibilities-scene figcaption {
+    left: 12px;
+    right: 12px;
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-possibilities * {
+    transition: none !important;
+  }
+}
+.motion-paused .project-possibilities * {
+  transition: none !important;
+}

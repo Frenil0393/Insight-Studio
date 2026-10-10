@@ -1,0 +1,78 @@
+.inline-brand-mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+.belief-index {
+  display: block;
+  width: 110px;
+  height: 138px;
+  color: #8b987b;
+}
+.contact-person-monogram .inline-brand-mark {
+  width: 31px;
+  height: 40px;
+}
+.construction-backdrop {
+  background: #142019 url('../images/garden-house-start.webp') center/cover no-repeat;
+}
+.construction-backdrop #construction-scroll-video {
+  visibility: hidden;
+}
+.construction-backdrop #construction-scroll-video.is-scroll-ready {
+  visibility: visible;
+}
+.install-help {
+  max-width: 460px;
+  width: calc(100% - 40px);
+  border: 0;
+  background: #eeece3;
+  color: #29372b;
+  padding: 35px;
+}
+.install-help::backdrop {
+  background: #122017b3;
+  backdrop-filter: blur(7px);
+}
+.install-help h2 {
+  font-size: 36px;
+  margin: 18px 0 22px;
+}
+.install-help p {
+  font-size: 13px;
+  color: #647058;
+  margin: 15px 0;
+}
+.install-help .button {
+  margin-top: 16px;
+}
+.install-help img {
+  width: 64px;
+  height: 64px;
+}
+.footer-bottom [data-install-app][hidden] {
+  display: none;
+}
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  .site-footer {
+    padding-bottom: calc(35px + env(safe-area-inset-bottom));
+  }
+  .footer-bottom [data-install-app] {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .belief-index {
+    width: 70px;
+    height: 88px;
+  }
+  .install-help {
+    padding: 28px;
+  }
+}

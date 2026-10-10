@@ -1,245 +1,289 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="top">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Detail | The Insight Studio</title>
-    <meta
-      name="description"
-      content="The Insight Studio is a visionary architectural and structural engineering firm based in Ahmedabad, Gujarat."
-    />
-
-    <!-- OPEN GRAPH / SOCIAL MEDIA PREVIEW TAGS -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Explore a project | Insight Studio</title>
+    <meta name="description" content="Explore a project — Insight Studio, Ahmedabad." />
+    <meta name="theme-color" content="#ebe8e0" />
+    <meta property="og:title" content="Explore a project | Insight Studio" />
+    <meta property="og:description" content="Explore a project — Insight Studio, Ahmedabad." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://insightstudio.gt.tc/" />
-    <meta
-      property="og:title"
-      content="The Insight Studio | Masterful Architecture"
-    />
-    <meta
-      property="og:description"
-      content="Visionary architectural and structural engineering firm crafting high-performance monoliths and luxury estates."
-    />
-    <!-- Replace this URL with a direct link to your best architectural rendering -->
     <meta
       property="og:image"
-      content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      content="https://insightstudio.gt.tc/V2/assets/images/courtyard.webp"
     />
+    <script src="assets/js/transition-boot.js?v=20261010-clean-source"></script>
+    <link rel="icon" href="assets/favicon.svg?v=20261010-app" type="image/svg+xml" />
+    <link rel="icon" href="assets/icons/icon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Insight Studio" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20261010-clean-source" />
+    <link rel="stylesheet" href="assets/css/experience.css?v=20261010-clean-source" />
+    <link rel="stylesheet" href="assets/css/refinements.css?v=20261010-clean-source" />
+    <link rel="stylesheet" href="assets/css/motion-detail.css?v=20261010-clean-source" />
+    <link rel="stylesheet" href="assets/css/chapter-pages.css?v=20261010-clean-source" />
+    <link rel="stylesheet" href="assets/css/process-atlas.css?v=20261010-clean-source" />
 
-    <!-- TWITTER CARDS -->
+    <link rel="stylesheet" href="assets/css/platform.css?v=20261010-clean-source" />
+    <script src="assets/js/install.js?v=20261010-clean-source" defer></script>
+    <script src="assets/js/app.js?v=20261010-clean-source" defer></script>
+    <script src="assets/js/experience.js?v=20261010-clean-source" defer></script>
+    <script src="assets/js/navigation.js?v=20261010-clean-source" defer></script>
+    <script src="assets/js/interface.js?v=20261010-clean-source" defer></script>
+    <script src="assets/js/chapter-pages.js?v=20261010-clean-source" defer></script>
+    <script src="assets/js/process-atlas.js?v=20261010-clean-source" defer></script>
+    <script type="module" src="assets/js/scroll.js?v=20261010-clean-source"></script>
+
+    <meta name="robots" content="noindex,follow" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="The Insight Studio | Architecture" />
-    <meta
-      name="twitter:description"
-      content="Visionary architectural and structural engineering firm."
-    />
-    <meta
-      name="twitter:image"
-      content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-    />
-    <meta name="theme-color" content="#0a0a0c" />
-
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Insight" />
-    <link rel="manifest" href="/manifest.json" />
-
-    <link rel="stylesheet" href="css/style.css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.module.js"></script>
-
-    <!-- Specific Mobile Styles for the Project Detail Page -->
-    <style>
-      /* 📱 MOBILE OVERRIDES */
-      @media (max-width: 768px) {
-        /* 1. Remove Header Button on Mobile */
-        .site-header .btn-primary {
-          display: none !important;
-        }
-
-        /* 2. Adjust Hero Section for Mobile */
-        .pd-hero {
-          height: 70vh !important;
-          padding-bottom: 3rem !important;
-        }
-        #pd-title {
-          font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
-          margin-bottom: 0.5rem !important;
-          line-height: 1.1;
-        }
-
-        /* 3. Reduce massive empty gaps in the main layout */
-        .pd-layout-grid {
-          padding-top: 4rem !important;
-          padding-bottom: 4rem !important;
-          gap: 3rem !important;
-        }
-
-        /* 4. Compact the Sidebar Meta Information */
-        .pd-meta-block {
-          margin-bottom: 1.5rem !important;
-        }
-        .pd-meta-block h4 {
-          margin-bottom: 0.3rem !important;
-        }
-
-        /* 5. Shrink Deep Text Slightly for Readability */
-        .pd-text-content h3 {
-          font-size: 1.5rem !important;
-          margin-bottom: 1rem !important;
-        }
-        .pd-text-content p {
-          font-size: 1rem !important;
-          margin-bottom: 2.5rem !important;
-        }
-
-        /* 6. Fix the Massive Bento Gallery Heights */
-        .pd-gallery-bento {
-          margin-bottom: 4rem !important;
-          gap: 1rem !important; /* Tighter gap between images */
-        }
-        .pd-gallery-item:nth-child(1),
-        .pd-gallery-item:nth-child(2),
-        .pd-gallery-item:nth-child(3) {
-          height: 35vh !important; /* Overrides the huge 85vh and 50vh desktop sizes */
-          border-radius: 12px !important;
-        }
-
-        /* 7. Next Project Section Spacing */
-        .pd-next-project {
-          padding: 5rem var(--container-padding) !important;
-        }
-        #pd-next-title {
-          font-size: clamp(2.5rem, 10vw, 3.5rem) !important;
-        }
-      }
-    </style>
   </head>
-  <body>
-    <!-- PERMANENT ELEMENTS -->
-    <div class="preloader-v2">
-      <div class="preloader-content">
-        <div class="preloader-title">INSIGHT STUDIO</div>
-        <div class="preloader-line-container">
-          <div class="preloader-line"></div>
-        </div>
-      </div>
-    </div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-    <div id="webgl-container"></div>
-
-    <!-- HEADER (With Back to Archive Button) -->
+  <body class="page-legacy">
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="container nav-wrapper">
-        <a href="index.html" class="brand-logo hover-target"
-          >Insight Studio<span>.</span></a
+      <a class="wordmark" href="index.html" aria-label="Insight Studio home"
+        ><svg class="brand-logo-svg" viewBox="64 16 375 470" aria-hidden="true" focusable="false">
+          <path
+            d="M 276.995 34.084 C 268.473 39.109, 260.150 43.993, 258.500 44.937 C 256.850 45.881, 252.575 48.325, 249 50.367 C 245.425 52.410, 241.825 54.500, 241 55.012 C 240.175 55.524, 230.950 60.971, 220.500 67.117 C 210.050 73.263, 199.475 79.567, 197 81.125 C 194.525 82.684, 190.025 85.328, 187 87.001 C 183.975 88.674, 179.700 91.167, 177.500 92.542 C 175.300 93.917, 172.825 95.326, 172 95.673 C 171.175 96.020, 169.825 96.860, 169 97.540 C 168.175 98.220, 165.250 99.962, 162.500 101.412 C 159.750 102.861, 150.075 108.508, 141 113.960 C 131.925 119.412, 120 126.455, 114.500 129.611 C 94.850 140.888, 77.488 151.390, 76.765 152.436 L 76.031 153.500 76.031 311.500 L 76.031 469.500 76.832 470.762 L 77.633 472.024 116.566 471.762 L 155.500 471.500 155.754 349.750 L 156.008 228 155.055 228 C 154.531 228, 148.681 231.227, 142.056 235.171 L 130.009 242.343 129.755 343.421 L 129.500 444.500 125.158 445.080 C 122.769 445.398, 116.694 445.398, 111.658 445.080 L 102.500 444.500 102.246 306.228 L 101.993 167.955 106.246 165.446 C 108.586 164.067, 117.025 159.048, 125 154.293 C 132.975 149.538, 149.625 139.717, 162 132.469 C 187.181 117.720, 239.599 86.820, 256.684 76.654 C 262.835 72.995, 268.134 70, 268.460 70 C 268.786 70, 268.928 76.826, 268.776 85.170 L 268.500 100.340 260 105.299 C 255.325 108.026, 241.825 116.007, 230 123.033 C 218.175 130.060, 202.987 139.019, 196.250 142.943 L 184 150.076 184 219.883 L 184 289.690 185.750 291.205 C 187.850 293.023, 198.180 298.993, 210.500 305.507 C 215.450 308.125, 220.175 310.812, 221 311.478 C 221.825 312.144, 225.200 314.180, 228.500 316.001 C 234.627 319.382, 235.917 320.129, 258.500 333.367 C 265.650 337.559, 288.150 350.579, 308.500 362.300 L 345.500 383.613 345.500 387.556 L 345.500 391.500 304.500 391.500 L 263.500 391.500 263 378.583 L 262.500 365.665 251.171 359.333 C 244.940 355.850, 239.202 353, 238.421 353 L 237 353 237 384.965 L 237 416.930 238.934 417.965 L 240.869 419 305 419 L 369.131 419 371.051 417.973 L 372.971 416.945 372.927 394.223 L 372.883 371.500 371.531 369.422 L 370.179 367.343 356.339 359.264 C 348.728 354.821, 339.350 349.498, 335.500 347.436 C 331.650 345.375, 320.850 339.114, 311.500 333.523 C 302.150 327.932, 292.025 321.996, 289 320.330 C 282.794 316.914, 230.822 287.045, 224.183 283.079 C 221.809 281.661, 218.635 279.825, 217.130 279 C 215.625 278.175, 213.401 276.780, 212.188 275.900 L 209.983 274.300 210.241 219.938 L 210.500 165.576 218.500 160.612 C 222.900 157.882, 237.750 149.036, 251.500 140.955 C 265.250 132.873, 279.579 124.373, 283.341 122.064 C 287.104 119.756, 290.763 117.644, 291.473 117.372 L 292.764 116.877 320.132 132.577 C 353.859 151.924, 349.883 149.632, 372 162.488 C 382.175 168.402, 392.413 174.331, 394.750 175.663 L 399 178.084 399.030 180.292 C 399.047 181.506, 399.060 206.323, 399.059 235.441 C 399.058 264.558, 399.321 289.430, 399.643 290.713 L 400.228 293.045 406.864 296.887 C 416.715 302.589, 424.819 307, 425.446 307 C 425.751 307, 426 274.660, 426 235.132 L 426 163.265 411.420 154.503 C 403.401 149.684, 395.189 144.893, 393.170 143.856 C 391.152 142.820, 388.825 141.524, 388 140.976 C 387.175 140.429, 377.500 134.869, 366.500 128.621 C 355.500 122.372, 335.250 110.731, 321.500 102.752 L 296.500 88.245 296 56.886 L 295.500 25.526 293.995 25.237 L 292.489 24.948 276.995 34.084 M 282 153.557 C 276.775 156.602, 268.225 161.765, 263 165.028 C 257.775 168.292, 249.782 173.035, 245.239 175.568 L 236.977 180.174 237.239 220.159 L 237.500 260.145 243 263.135 C 246.025 264.780, 250.975 267.602, 254 269.406 C 259.123 272.462, 267.424 277.302, 284.500 287.189 C 288.350 289.419, 295.550 293.626, 300.500 296.539 C 305.450 299.452, 311.300 302.846, 313.500 304.081 C 337.397 317.501, 342.687 320.532, 356.597 328.777 C 361.494 331.679, 372.925 338.270, 382 343.424 L 398.500 352.794 398.760 398.902 L 399.020 445.010 304.760 444.755 L 210.500 444.500 210 390.040 L 209.500 335.581 198 328.806 C 191.675 325.081, 185.935 322.025, 185.244 322.016 L 183.987 322 184.244 396.750 L 184.500 471.500 305.236 471.754 L 425.972 472.008 426.236 405.853 L 426.500 339.698 425.500 338.478 C 424.325 337.046, 382.497 312.595, 366 303.697 C 361.875 301.472, 354.977 297.480, 350.671 294.826 C 346.365 292.172, 342.661 290, 342.440 290 C 342.219 290, 339.668 288.497, 336.769 286.661 C 333.871 284.824, 329.025 281.959, 326 280.295 C 297.161 264.425, 265.608 246.002, 264.250 244.240 L 263 242.618 263 220 L 263 197.382 264.250 195.788 C 265.328 194.412, 284.210 182.526, 290.741 179.111 L 292.982 177.939 296.241 179.618 C 298.033 180.541, 300.892 182.355, 302.594 183.648 C 304.296 184.942, 305.962 186, 306.297 186 C 306.893 186, 329.871 199.403, 341.304 206.419 L 347.109 209.981 346.923 236.026 C 346.821 250.350, 346.909 262.196, 347.118 262.349 C 350.453 264.787, 369.481 275.262, 370.759 275.363 L 372.500 275.500 372.778 236.500 C 372.931 215.050, 372.819 196.523, 372.529 195.329 L 372.001 193.157 360.751 186.680 C 354.563 183.117, 336.965 172.956, 321.645 164.101 C 306.325 155.245, 293.275 148.004, 292.645 148.010 C 292.015 148.015, 287.225 150.511, 282 153.557 M 142 174.774 L 130.500 181.536 130 192.518 C 129.725 198.558, 129.658 205.412, 129.851 207.750 L 130.201 212 131.120 212 C 131.625 212, 137.430 208.771, 144.019 204.824 L 156 197.649 156 182.824 L 156 168 154.750 168.006 C 154.063 168.009, 148.325 171.054, 142 174.774"
+            fill="currentColor"
+            fill-rule="evenodd"
+          /></svg
+        ><span>insight<span class="wordmark-small">STUDIO</span></span></a
+      ><span class="header-location">Architecture & spatial design<br />Ahmedabad, India</span>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="work.html" aria-current="page">Work<sup>04</sup></a
+        ><a href="about.html"
+          >Studio<sup><span aria-hidden="true">↗</span></sup></a
+        ><a href="contact.html"
+          >Contact<sup><span aria-hidden="true">↗</span></sup></a
         >
-        <!-- This button will be hidden on mobile by the CSS above -->
-        <a
-          href="work.html"
-          class="btn-primary hover-target"
-          style="padding: 0.8rem 2rem"
-          ><span>Back to Archive</span></a
-        >
-      </div>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+        Menu <span aria-hidden="true">＋</span>
+      </button>
     </header>
-
-    <main>
-      <!-- 1. Immersive Hero with Parallax -->
-      <section class="pd-hero">
-        <div class="pd-hero-img-wrapper" id="pd-parallax-img">
-          <img id="pd-image" src="" alt="Project Hero Image" />
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="index.html">Home</a><a href="work.html">Selected work <sup>04</sup></a
+      ><a href="about.html">The studio</a
+      ><a href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
+      <p>Ahmedabad, Gujarat · India</p>
+    </nav>
+    <div class="reading-progress" aria-hidden="true"></div>
+    <main id="main">
+      <section class="page-intro section-pad">
+        <p class="eyebrow"><span>Project archive</span>Insight Studio</p>
+        <h1>Find your<br /><em>point of view.</em></h1>
+        <div class="project-grid">
+          <article class="project-card reveal" data-category="Residential">
+            <a
+              href="zenith-residence.html"
+              class="project-image"
+              aria-label="Explore Zenith Residence"
+              ><img
+                class=""
+                src="assets/images/zenith.webp"
+                srcset="assets/images/zenith-small.webp 768w, assets/images/zenith.webp 1536w"
+                sizes="(max-width: 700px) 100vw, 85vw"
+                alt="Zenith Residence — generated architectural concept visualization"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              /><span class="project-open" aria-hidden="true">↗</span
+              ><span class="image-tag">Luxury Residential</span></a
+            >
+            <div class="project-caption">
+              <span class="project-number">01</span>
+              <div>
+                <h3><a href="zenith-residence.html">Zenith Residence</a></h3>
+                <p>At the edge of land. At one with the horizon.</p>
+              </div>
+              <span class="project-year">2025</span>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="Landscape">
+            <a href="aura-pavilion.html" class="project-image" aria-label="Explore Aura Pavilion"
+              ><img
+                class=""
+                src="assets/images/aura.webp"
+                srcset="assets/images/aura-small.webp 768w, assets/images/aura.webp 1536w"
+                sizes="(max-width: 700px) 100vw, 85vw"
+                alt="Aura Pavilion — generated architectural concept visualization"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              /><span class="project-open" aria-hidden="true">↗</span
+              ><span class="image-tag">Landscape & Structure</span></a
+            >
+            <div class="project-caption">
+              <span class="project-number">02</span>
+              <div>
+                <h3><a href="aura-pavilion.html">Aura Pavilion</a></h3>
+                <p>A gentle gesture. A place to come together.</p>
+              </div>
+              <span class="project-year">2026</span>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="Commercial">
+            <a
+              href="obsidian-tower.html"
+              class="project-image"
+              aria-label="Explore The Obsidian Tower"
+              ><img
+                class=""
+                src="assets/images/obsidian.webp"
+                srcset="assets/images/obsidian-small.webp 768w, assets/images/obsidian.webp 1536w"
+                sizes="(max-width: 700px) 100vw, 85vw"
+                alt="The Obsidian Tower — generated architectural concept visualization"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              /><span class="project-open" aria-hidden="true">↗</span
+              ><span class="image-tag">Commercial Architecture</span></a
+            >
+            <div class="project-caption">
+              <span class="project-number">03</span>
+              <div>
+                <h3><a href="obsidian-tower.html">The Obsidian Tower</a></h3>
+                <p>A new dialogue with the skyline.</p>
+              </div>
+              <span class="project-year">2026</span>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="Cultural">
+            <a href="lumina-museum.html" class="project-image" aria-label="Explore Lumina Museum"
+              ><img
+                class=""
+                src="assets/images/lumina.webp"
+                srcset="assets/images/lumina-small.webp 768w, assets/images/lumina.webp 1536w"
+                sizes="(max-width: 700px) 100vw, 85vw"
+                alt="Lumina Museum — generated architectural concept visualization"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              /><span class="project-open" aria-hidden="true">↗</span
+              ><span class="image-tag">Cultural Space</span></a
+            >
+            <div class="project-caption">
+              <span class="project-number">04</span>
+              <div>
+                <h3><a href="lumina-museum.html">Lumina Museum</a></h3>
+                <p>An architecture shaped by the absence of light.</p>
+              </div>
+              <span class="project-year">2025</span>
+            </div>
+          </article>
         </div>
-        <div class="pd-hero-overlay"></div>
-        <div class="pd-hero-content container">
-          <span
-            class="subtitle gs-reveal"
-            id="pd-category"
-            style="color: var(--text-primary)"
-            >Loading...</span
-          >
-          <h1 class="title-display gs-reveal" id="pd-title" style="color: #fff">
-            Loading...
-          </h1>
-        </div>
       </section>
-
-      <!-- 2. Sticky Meta & Deep Text Content -->
-      <section class="container pd-layout-grid">
-        <!-- Sidebar -->
-        <aside class="pd-sticky-sidebar gs-reveal">
-          <div class="pd-meta-block">
-            <h4>Client</h4>
-            <p id="pd-client">Loading...</p>
-          </div>
-          <div class="pd-meta-block">
-            <h4>Role & Scope</h4>
-            <p id="pd-role">Loading...</p>
-          </div>
-          <div class="pd-meta-block">
-            <h4>Timeline</h4>
-            <p id="pd-duration">Loading...</p>
-          </div>
-          <div class="pd-meta-block">
-            <h4>Materials & Tech</h4>
-            <ul id="pd-materials">
-              <li>Loading...</li>
-            </ul>
-          </div>
-        </aside>
-
-        <!-- Main Scroll Content -->
-        <article class="pd-text-content">
-          <div class="gs-reveal">
-            <h3>The Challenge</h3>
-            <p id="pd-challenge">Loading...</p>
-          </div>
-          <div class="gs-reveal">
-            <h3>Architectural Solution</h3>
-            <p id="pd-solution">Loading...</p>
-          </div>
-        </article>
-      </section>
-
-      <!-- 3. Asymmetrical Bento Gallery -->
-      <section class="container pd-gallery-bento" id="pd-gallery"></section>
-
-      <!-- 4. Massive Next Project Link -->
-      <section
-        class="pd-next-project hover-target"
-        id="pd-next-link"
-        style="cursor: pointer"
-      >
-        <a
-          href="#"
-          id="pd-next-href"
-          style="display: block; width: 100%; height: 100%"
-        >
-          <span class="subtitle">Next Project</span>
-          <div class="pd-next-title" id="pd-next-title">Loading...</div>
-        </a>
-      </section>
+      <script src="assets/js/legacy.js?v=20261010-clean-source" defer></script>
     </main>
-
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-bottom" style="border-top: none">
-          <p>&copy; 2026 The Insight Studio. All Rights Reserved.</p>
-          <p>Founder: Vasu Vasoya</p>
+      <div class="footer-top">
+        <p class="eyebrow">A conversation is where it begins.</p>
+        <p>Considered spaces.<br />Lasting connections.</p>
+      </div>
+      <a class="footer-cta" href="contact.html"
+        >Let’s make<br /><em>room for more.</em><span aria-hidden="true">↗</span></a
+      >
+      <div class="footer-grid">
+        <a class="wordmark" href="index.html"
+          ><svg class="brand-logo-svg" viewBox="64 16 375 470" aria-hidden="true" focusable="false">
+            <path
+              d="M 276.995 34.084 C 268.473 39.109, 260.150 43.993, 258.500 44.937 C 256.850 45.881, 252.575 48.325, 249 50.367 C 245.425 52.410, 241.825 54.500, 241 55.012 C 240.175 55.524, 230.950 60.971, 220.500 67.117 C 210.050 73.263, 199.475 79.567, 197 81.125 C 194.525 82.684, 190.025 85.328, 187 87.001 C 183.975 88.674, 179.700 91.167, 177.500 92.542 C 175.300 93.917, 172.825 95.326, 172 95.673 C 171.175 96.020, 169.825 96.860, 169 97.540 C 168.175 98.220, 165.250 99.962, 162.500 101.412 C 159.750 102.861, 150.075 108.508, 141 113.960 C 131.925 119.412, 120 126.455, 114.500 129.611 C 94.850 140.888, 77.488 151.390, 76.765 152.436 L 76.031 153.500 76.031 311.500 L 76.031 469.500 76.832 470.762 L 77.633 472.024 116.566 471.762 L 155.500 471.500 155.754 349.750 L 156.008 228 155.055 228 C 154.531 228, 148.681 231.227, 142.056 235.171 L 130.009 242.343 129.755 343.421 L 129.500 444.500 125.158 445.080 C 122.769 445.398, 116.694 445.398, 111.658 445.080 L 102.500 444.500 102.246 306.228 L 101.993 167.955 106.246 165.446 C 108.586 164.067, 117.025 159.048, 125 154.293 C 132.975 149.538, 149.625 139.717, 162 132.469 C 187.181 117.720, 239.599 86.820, 256.684 76.654 C 262.835 72.995, 268.134 70, 268.460 70 C 268.786 70, 268.928 76.826, 268.776 85.170 L 268.500 100.340 260 105.299 C 255.325 108.026, 241.825 116.007, 230 123.033 C 218.175 130.060, 202.987 139.019, 196.250 142.943 L 184 150.076 184 219.883 L 184 289.690 185.750 291.205 C 187.850 293.023, 198.180 298.993, 210.500 305.507 C 215.450 308.125, 220.175 310.812, 221 311.478 C 221.825 312.144, 225.200 314.180, 228.500 316.001 C 234.627 319.382, 235.917 320.129, 258.500 333.367 C 265.650 337.559, 288.150 350.579, 308.500 362.300 L 345.500 383.613 345.500 387.556 L 345.500 391.500 304.500 391.500 L 263.500 391.500 263 378.583 L 262.500 365.665 251.171 359.333 C 244.940 355.850, 239.202 353, 238.421 353 L 237 353 237 384.965 L 237 416.930 238.934 417.965 L 240.869 419 305 419 L 369.131 419 371.051 417.973 L 372.971 416.945 372.927 394.223 L 372.883 371.500 371.531 369.422 L 370.179 367.343 356.339 359.264 C 348.728 354.821, 339.350 349.498, 335.500 347.436 C 331.650 345.375, 320.850 339.114, 311.500 333.523 C 302.150 327.932, 292.025 321.996, 289 320.330 C 282.794 316.914, 230.822 287.045, 224.183 283.079 C 221.809 281.661, 218.635 279.825, 217.130 279 C 215.625 278.175, 213.401 276.780, 212.188 275.900 L 209.983 274.300 210.241 219.938 L 210.500 165.576 218.500 160.612 C 222.900 157.882, 237.750 149.036, 251.500 140.955 C 265.250 132.873, 279.579 124.373, 283.341 122.064 C 287.104 119.756, 290.763 117.644, 291.473 117.372 L 292.764 116.877 320.132 132.577 C 353.859 151.924, 349.883 149.632, 372 162.488 C 382.175 168.402, 392.413 174.331, 394.750 175.663 L 399 178.084 399.030 180.292 C 399.047 181.506, 399.060 206.323, 399.059 235.441 C 399.058 264.558, 399.321 289.430, 399.643 290.713 L 400.228 293.045 406.864 296.887 C 416.715 302.589, 424.819 307, 425.446 307 C 425.751 307, 426 274.660, 426 235.132 L 426 163.265 411.420 154.503 C 403.401 149.684, 395.189 144.893, 393.170 143.856 C 391.152 142.820, 388.825 141.524, 388 140.976 C 387.175 140.429, 377.500 134.869, 366.500 128.621 C 355.500 122.372, 335.250 110.731, 321.500 102.752 L 296.500 88.245 296 56.886 L 295.500 25.526 293.995 25.237 L 292.489 24.948 276.995 34.084 M 282 153.557 C 276.775 156.602, 268.225 161.765, 263 165.028 C 257.775 168.292, 249.782 173.035, 245.239 175.568 L 236.977 180.174 237.239 220.159 L 237.500 260.145 243 263.135 C 246.025 264.780, 250.975 267.602, 254 269.406 C 259.123 272.462, 267.424 277.302, 284.500 287.189 C 288.350 289.419, 295.550 293.626, 300.500 296.539 C 305.450 299.452, 311.300 302.846, 313.500 304.081 C 337.397 317.501, 342.687 320.532, 356.597 328.777 C 361.494 331.679, 372.925 338.270, 382 343.424 L 398.500 352.794 398.760 398.902 L 399.020 445.010 304.760 444.755 L 210.500 444.500 210 390.040 L 209.500 335.581 198 328.806 C 191.675 325.081, 185.935 322.025, 185.244 322.016 L 183.987 322 184.244 396.750 L 184.500 471.500 305.236 471.754 L 425.972 472.008 426.236 405.853 L 426.500 339.698 425.500 338.478 C 424.325 337.046, 382.497 312.595, 366 303.697 C 361.875 301.472, 354.977 297.480, 350.671 294.826 C 346.365 292.172, 342.661 290, 342.440 290 C 342.219 290, 339.668 288.497, 336.769 286.661 C 333.871 284.824, 329.025 281.959, 326 280.295 C 297.161 264.425, 265.608 246.002, 264.250 244.240 L 263 242.618 263 220 L 263 197.382 264.250 195.788 C 265.328 194.412, 284.210 182.526, 290.741 179.111 L 292.982 177.939 296.241 179.618 C 298.033 180.541, 300.892 182.355, 302.594 183.648 C 304.296 184.942, 305.962 186, 306.297 186 C 306.893 186, 329.871 199.403, 341.304 206.419 L 347.109 209.981 346.923 236.026 C 346.821 250.350, 346.909 262.196, 347.118 262.349 C 350.453 264.787, 369.481 275.262, 370.759 275.363 L 372.500 275.500 372.778 236.500 C 372.931 215.050, 372.819 196.523, 372.529 195.329 L 372.001 193.157 360.751 186.680 C 354.563 183.117, 336.965 172.956, 321.645 164.101 C 306.325 155.245, 293.275 148.004, 292.645 148.010 C 292.015 148.015, 287.225 150.511, 282 153.557 M 142 174.774 L 130.500 181.536 130 192.518 C 129.725 198.558, 129.658 205.412, 129.851 207.750 L 130.201 212 131.120 212 C 131.625 212, 137.430 208.771, 144.019 204.824 L 156 197.649 156 182.824 L 156 168 154.750 168.006 C 154.063 168.009, 148.325 171.054, 142 174.774"
+              fill="currentColor"
+              fill-rule="evenodd"
+            /></svg
+          ><span>insight<span class="wordmark-small">STUDIO</span></span></a
+        >
+        <div>
+          <span class="eyebrow">Find us</span>
+          <p>Ahmedabad, Gujarat<br />India</p>
         </div>
+        <div>
+          <span class="eyebrow">Say hello</span
+          ><a href="mailto:insightstudio27@gmail.com">insightstudio27@gmail.com</a
+          ><a
+            href="https://www.instagram.com/insight__studio_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram ↗</a
+          >
+        </div>
+        <div class="footer-nav">
+          <a href="work.html">Selected work</a><a href="about.html">The studio</a
+          ><a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Insight Studio</span><span>Principal Architect · Vasu Vasoya</span>
+        <div>
+          <a href="privacy.html">Privacy</a
+          ><button type="button" data-cookie-settings>Cookie settings</button
+          ><button type="button" data-install-app hidden>Install studio app ↗</button
+          ><button type="button" data-motion-toggle aria-pressed="false">Pause motion</button>
+        </div>
+        <a href="#top">Back to top ↑</a>
       </div>
     </footer>
-
-    <!-- SCRIPTS -->
-    <script type="module" src="js/data.js"></script>
-    <script type="module" src="js/scene.js"></script>
-    <script type="module" src="js/app.js"></script>
+    <aside class="cookie-banner" aria-label="Privacy preferences" hidden>
+      <div>
+        <strong>A little space for privacy.</strong>
+        <p>We remember your privacy choice on this device. No analytics or advertising cookies.</p>
+      </div>
+      <div class="cookie-actions">
+        <button class="button small" data-cookie-accept>
+          Essential only <span aria-hidden="true">✓</span></button
+        ><button class="underlined" data-cookie-settings>Preferences</button>
+      </div>
+    </aside>
+    <dialog class="cookie-dialog">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Close privacy preferences">×</button>
+        <p class="eyebrow">Your privacy</p>
+        <h2>Only what’s<br /><em>necessary.</em></h2>
+        <p>
+          This site uses local storage to remember your privacy choice. There are no analytics,
+          advertising or tracking cookies.
+        </p>
+        <div class="preference-row">
+          <div>
+            <strong>Essential preferences</strong>
+            <p>Stores this choice for six months.</p>
+          </div>
+          <span>Always on</span>
+        </div>
+        <p>
+          Contact details are sent to Web3Forms only when you submit an inquiry.
+          <a class="underlined" href="privacy.html">Read our privacy notice.</a>
+        </p>
+        <button class="button" type="button" data-cookie-save>
+          Save preferences <span aria-hidden="true">↗</span>
+        </button>
+      </form>
+    </dialog>
+    <dialog class="install-help" aria-labelledby="install-title">
+      <img src="assets/icons/icon-192.png" width="64" height="64" alt="Insight Studio" />
+      <h2 id="install-title">A place on your<br /><em>home screen.</em></h2>
+      <p>On iPhone or iPad, open this site in Safari, use Share, then Add to Home Screen.</p>
+      <p>
+        On a computer or Android device, look for Install app or Add to Home Screen in your
+        browser’s menu. Availability depends on your browser.
+      </p>
+      <button class="button" type="button" data-close-install>
+        Got it <span aria-hidden="true">✓</span>
+      </button>
+    </dialog>
+    <noscript
+      ><p class="noscript-note">
+        All projects are available below. Interactive model and preferences require JavaScript.
+      </p></noscript
+    >
   </body>
 </html>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3344" height="1882" viewBox="0 0 1672 941">
+  <title>Courtyard perspective drawing with illustrative dimensions</title>
+  <desc>
+    Linework aligned to the generated courtyard image. All dimensions are conceptual assumptions in
+    millimetres and are not verified construction measurements.
+  </desc>
+  <g
+    fill="none"
+    stroke="#c6eeec"
+    stroke-width="1.25"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  >
+    <path
+      d="M248 62H1335L1228 184H458V647L248 591ZM458 184L546 278H1158M546 278V627M502 233V639M458 647L502 639L546 627"
+    />
+    <path
+      d="M975 496L1404 0M975 496L1672 102M975 496L1672 268M1000 515L1672 297M1172 458V632M1268 417V640M1300 403V646M1406 354V649M1487 318V652M1505 311V656M1590 277V678M1613 272V678M1672 269V690"
+    />
+    <path
+      d="M568 484H744L783 495V628M1044 510V617M1108 491V622M0 721L451 652H1089L1672 872M0 742L457 665H1087L1672 901M1087 665V749M460 665L458 773M1097 655L1672 822M502 640L1172 632M546 627L1108 622"
+    />
+  </g>
+  <g fill="none" stroke="#bce7e6" stroke-width=".7" opacity=".48">
+    <path
+      stroke-dasharray="12 8 2 8"
+      d="M248 20V811M458 20V820M546 235V806M1335 20V290M170 647H1590M174 184H1323M170 62H1450M1108 385V786"
+    />
+    <path
+      d="M270 107H1295M300 128H1278M278 151H1250M272 330H453M272 391H453M272 453H453M272 515H453M286 73L446 166M317 73L449 149M353 73L449 131M389 73L449 111M421 73L448 88"
+    />
+    <path d="M1268 417L1268 640M1420 350V650M1535 303V665M1160 660L1650 830M1143 675L1620 845" />
+  </g>
+  <g fill="none" stroke="#e8be91" stroke-width="1">
+    <!-- Dimension chains follow the visible image geometry; values are illustrative. -->
+    <path d="M248 62V28M1335 62V28M248 37H1335M240 45l16-16M1327 45l16-16" />
+    <path d="M458 184V155M1228 184V155M458 164H1228M450 172l16-16M1220 172l16-16" />
+    <path d="M248 62H202M248 647H202M214 62V647M206 70l16-16M206 655l16-16" />
+    <path d="M458 184H417M458 647H417M429 184V647M421 192l16-16M421 655l16-16" />
+    <path d="M458 647V701M1089 652V701M458 689H1089M450 697l16-16M1081 697l16-16" />
+    <path d="M248 591V620M458 647V676M248 610L458 666M242 618l12-16M452 674l12-16" />
+    <path d="M1300 403L1300 375M1406 354V326M1300 382L1406 334M1295 391l10-18M1401 343l10-18" />
+    <path
+      d="M637 210L715 312H835M1420 480H1510L1550 450H1630M694 643L750 597H846M876 722L940 773H1060"
+    />
+    <path d="M674 639h22l-11 10ZM866 718h22l-11 10Z" fill="#e8be91" />
+    <circle cx="248" cy="797" r="16" />
+    <circle cx="458" cy="797" r="16" />
+    <circle cx="1108" cy="797" r="16" />
+    <path d="M79 849H319M79 842V857M139 842V857M199 842V857M259 842V857M319 842V857" />
+  </g>
+  <g fill="#e8be91" font-family="monospace" font-size="15" letter-spacing="1">
+    <text x="791" y="29" text-anchor="middle">12 000*</text>
+    <text x="843" y="153" text-anchor="middle">9 000* CLEAR SPAN</text>
+    <text x="198" y="354" text-anchor="middle" transform="rotate(-90 198 354)">
+      6 200* / PORTAL HEIGHT
+    </text>
+    <text x="417" y="430" text-anchor="middle" transform="rotate(-90 417 430)">4 800* CLEAR</text>
+    <text x="773" y="680" text-anchor="middle">9 600* / WATER COURT</text>
+    <text x="345" y="628" text-anchor="middle" transform="rotate(15 345 628)">1 800*</text>
+    <text x="1349" y="353" text-anchor="middle" transform="rotate(-24 1349 353)">2 400*</text>
+    <text x="724" y="302">01 / STONE PORTAL</text>
+    <text x="1542" y="438">02 / GLAZING</text>
+    <text x="750" y="585">FFL ±0 000</text>
+    <text x="949" y="761">WATER −300*</text>
+    <text x="248" y="802" text-anchor="middle">A</text>
+    <text x="458" y="802" text-anchor="middle">B</text>
+    <text x="1108" y="802" text-anchor="middle">C</text>
+    <text x="79" y="831" font-size="12">GRAPHIC DATUM / NTS</text>
+    <text x="79" y="882" font-size="12">IS–001 / PERSPECTIVE STUDY</text>
+    <text x="79" y="906" font-size="11">* ILLUSTRATIVE DIMENSIONS · mm · NOT SURVEYED</text>
+  </g>
+</svg>
